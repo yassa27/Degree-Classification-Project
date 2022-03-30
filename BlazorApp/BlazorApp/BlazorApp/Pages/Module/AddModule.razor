@@ -1,0 +1,65 @@
+﻿@page "/addmodule"
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@using BlazorApp.Common.ViewModels
+@using BlazorApp.Services.Interface
+@inject ICourseManagementService _Module
+@inject NavigationManager NavigationManager
+@if (Successmessage != null)
+{
+    <p class="alert-success">@Successmessage</p>
+}else if(Failuemessage != null)
+{
+    <p class="alert-danger">@Failuemessage</p>
+}
+<h3>Add Module</h3>
+<form>
+    <div class="form-outline mb-4">
+        <div class="col-md-4">
+            <EditForm Model="@moduleVM" OnValidSubmit="HandleValidSubmit">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <div class="form-group">
+                    <label>Enter Module Name</label>
+                    <InputText @bind-Value="moduleVM.ModuleName" class="form-control"></InputText>
+                </div>
+                <div class="form-group">
+                    <label>Enter Module Credits</label>
+                    <InputNumber @bind-Value="moduleVM.ModuleCredit" class="form-control"></InputNumber>
+                </div>
+                <div class="submit-btn-con col-12 text-right">
+                            <a href="/module/index" name="" id="" class="btn btn-secondary btn-cancel text-white text-uppercase font-weight-bold">Cancel</a>
+                            <input type="submit" name="" id="" class="btn btn-primary btn-submit text-white text-uppercase font-weight-bold" value="Add ">
+                        </div>
+
+            </EditForm>
+        </div>
+
+    </div>
+</form>
+@code {
+    ModuleVM moduleVM = new ModuleVM();
+    public string UserName;
+    string Successmessage = null;
+    string Failuemessage = null;
+    private async Task HandleValidSubmit()
+    {
+        UserName = HttpContextAccessor.HttpContext.User.Identity.Name;
+        if (moduleVM !=null)
+        {
+            moduleVM.InsertedBy = UserName;
+            var response =  _Module.AddNewModule(moduleVM);
+            if(response == true)
+            {
+                Successmessage ="Module Added  SuccessFully";
+                moduleVM = new ModuleVM();
+               NavigationManager.NavigateTo("/module/index");
+            }
+            else
+            {
+                 Failuemessage ="Module is Already Added or Something Wents Wrong... ";
+            }
+        }
+    }
+}
