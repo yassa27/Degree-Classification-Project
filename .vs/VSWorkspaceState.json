@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BlazorApp",
+    "\\BlazorApp\\BlazorApp",
+    "\\BlazorApp\\BlazorApp\\BlazorApp",
+    "\\BlazorApp\\BlazorApp\\BlazorApp\\Areas",
+    "\\BlazorApp\\BlazorApp\\BlazorApp\\Areas\\Identity",
+    "\\BlazorApp\\BlazorApp\\BlazorApp\\Areas\\Identity\\Pages",
+    "\\BlazorApp\\BlazorApp\\BlazorApp\\Areas\\Identity\\Pages\\Shared"
+  ],
+  "SelectedNode": "\\BlazorApp\\BlazorApp\\BlazorApp\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml",
+  "PreviewInSolutionExplorer": false
+}
