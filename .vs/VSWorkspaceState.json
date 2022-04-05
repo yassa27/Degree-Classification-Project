@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BlazorApp"
+    "\\BlazorApp",
+    "\\BlazorApp\\BlazorApp"
   ],
-  "SelectedNode": "\\BlazorApp\\BlazorApp.sln",
+  "SelectedNode": "\\BlazorApp\\BlazorApp\\BlazorApp.csproj",
   "PreviewInSolutionExplorer": false
 }

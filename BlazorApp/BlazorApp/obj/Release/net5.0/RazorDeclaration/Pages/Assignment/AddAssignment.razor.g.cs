@@ -151,7 +151,7 @@ using BlazorApp.Services.Interface;
             }
             else
             {
-                 Failuemessage ="Something Wents Wrong... ";
+                 Failuemessage ="Something went wrong, please ensure the assignment weight is correct";
             }
         }
     }

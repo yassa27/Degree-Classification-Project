@@ -13,98 +13,98 @@ namespace BlazorApp.Pages.Assignment
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
+#line 1 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
+#line 2 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
+#line 3 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
+#line 4 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
+#line 5 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
+#line 6 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
+#line 7 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
+#line 8 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
+#line 9 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
 using BlazorApp;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
+#line 10 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\_Imports.razor"
 using BlazorApp.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
+#line 2 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
 using System.Security.Claims;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
+#line 3 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
 using Microsoft.AspNetCore.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
+#line 5 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
 using BlazorApp.Common.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
+#line 6 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
 using BlazorApp.Services.Interface;
 
 #line default
@@ -119,15 +119,15 @@ using BlazorApp.Services.Interface;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 75 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
+#line 75 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
        
     private long idToDelete = 0;
     private long idToAdd = 0;
     public string UserName;
     public string ModuleName;
     private long modid;
-     string Successmessage = null;
-    string Failuemessage = null;
+    string Successmessage = null;
+    string Failuremessage = null;
     [Parameter]
     public long Moduleid
     {
@@ -160,12 +160,12 @@ using BlazorApp.Services.Interface;
         if (res == true)
         {
             Successmessage ="Assignment Deleted  SuccessFully";
-             var response =  _Assignment.GetAssignments(Moduleid);
-        assignmentListVM.assignmentVMs = response.assignmentVMs;
+            var response =  _Assignment.GetAssignments(Moduleid);
+            assignmentListVM.assignmentVMs = response.assignmentVMs;
         }else
-            {
-                 Failuemessage ="Something Wents Wrong... ";
-            }
+        {
+            Failuremessage = "Something went wrong";
+        }
     }
 
 #line default

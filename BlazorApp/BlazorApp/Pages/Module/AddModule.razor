@@ -9,9 +9,9 @@
 @if (Successmessage != null)
 {
     <p class="alert-success">@Successmessage</p>
-}else if(Failuemessage != null)
+}else if(Failuremessage != null)
 {
-    <p class="alert-danger">@Failuemessage</p>
+    <p class="alert-danger">@Failuremessage</p>
 }
 <h3>Add Module</h3>
 <form>
@@ -42,7 +42,7 @@
     ModuleVM moduleVM = new ModuleVM();
     public string UserName;
     string Successmessage = null;
-    string Failuemessage = null;
+    string Failuremessage = null;
     private async Task HandleValidSubmit()
     {
         UserName = HttpContextAccessor.HttpContext.User.Identity.Name;
@@ -54,11 +54,11 @@
             {
                 Successmessage ="Module Added  SuccessFully";
                 moduleVM = new ModuleVM();
-               NavigationManager.NavigateTo("/module/index");
+                NavigationManager.NavigateTo("/module/index");
             }
             else
             {
-                 Failuemessage ="Module is Already Added or Something Wents Wrong... ";
+                Failuremessage = "Module is Already Added or Something Wents Wrong... ";
             }
         }
     }

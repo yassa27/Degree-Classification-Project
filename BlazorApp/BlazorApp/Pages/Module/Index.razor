@@ -66,8 +66,8 @@
 @code {
     private long idToDelete = 0;
     public string UserName;
-     string Successmessage = null;
-    string Failuemessage = null;
+    string Successmessage = null;
+    string Failuremessage = null;
     ModuleListVM moduleListVM = new ModuleListVM();
     protected override async Task OnParametersSetAsync()
     {
@@ -93,11 +93,11 @@
         if (res == true)
         {
             Successmessage ="Module Deleted  SuccessFully";
-             var response =  _Module.GetUserModules(UserName);
-        moduleListVM.moduleVMs = response.moduleVMs;
+            var response =  _Module.GetUserModules(UserName);
+            moduleListVM.moduleVMs = response.moduleVMs;
         }else
-            {
-                 Failuemessage ="Something Wents Wrong... ";
-            }
+        {
+            Failuremessage = "Something Wents Wrong... ";
+        }
     }
 }

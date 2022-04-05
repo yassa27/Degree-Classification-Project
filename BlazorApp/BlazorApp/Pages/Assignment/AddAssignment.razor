@@ -9,9 +9,9 @@
 @if (Successmessage != null)
 {
     <p class="alert-success">@Successmessage</p>
-}else if(Failuemessage != null)
+}else if(Failuremessage != null)
 {
-    <p class="alert-danger">@Failuemessage</p>
+    <p class="alert-danger">@Failuremessage</p>
 }
 <h3>Add Assignment</h3>
 <form>
@@ -45,7 +45,7 @@
     AssignmentVM assignmentVM = new AssignmentVM();
     public string UserName;
     string Successmessage = null;
-    string Failuemessage = null;
+    string Failuremessage = null;
     private long modid;
     [Parameter]
     public long Moduleid
@@ -68,11 +68,11 @@
             {
                 Successmessage ="Assignment Added  SuccessFully";
                 assignmentVM = new AssignmentVM();
-               NavigationManager.NavigateTo("/Assignment/index/"+Moduleid);
+                NavigationManager.NavigateTo("/Assignment/index/"+Moduleid);
             }
             else
             {
-                 Failuemessage ="Something Wents Wrong... ";
+                Failuremessage = "Something went wrong, please ensure the assignment weight is correct";
             }
         }
     }

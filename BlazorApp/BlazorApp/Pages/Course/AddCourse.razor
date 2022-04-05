@@ -10,9 +10,9 @@
 {
     <p class="alert-success">@Successmessage</p>
     @*NavigationManager.NavigateTo("./addmodule");*@
-}else if(Failuemessage != null)
+}else if(Failuremessage != null)
 {
-    <p class="alert-danger">@Failuemessage</p>
+    <p class="alert-danger">@Failuremessage</p>
 }
 <h3>Add Course</h3>
 <form>
@@ -42,7 +42,7 @@
     CourseVM courseVM = new CourseVM();
     public string UserName;
     string Successmessage = null;
-    string Failuemessage = null;
+    string Failuremessage = null;
     private async Task HandleValidSubmit()
     {
         UserName = HttpContextAccessor.HttpContext.User.Identity.Name;
@@ -54,12 +54,12 @@
             {
                 Successmessage ="Course Added  SuccessFully";
                 courseVM = new CourseVM();
-                 NavigationManager.NavigateTo("/");
+                NavigationManager.NavigateTo("/");
             }
             else
             {
-                 Failuemessage ="Course is Already Added or Something Wents Wrong... ";
-                 
+                Failuremessage = "Course is Already Added or Something Wents Wrong... ";
+
             }
         }
     }

@@ -164,7 +164,7 @@ using BlazorApp.Services.Interface;
         assignmentListVM.assignmentVMs = response.assignmentVMs;
         }else
             {
-                 Failuemessage ="Something Wents Wrong... ";
+                 Failuemessage ="Something went wrong";
             }
     }
 
