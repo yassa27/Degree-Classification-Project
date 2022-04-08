@@ -119,7 +119,7 @@ using BlazorApp.Services.Interface;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 75 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
+#line 74 "C:\Users\siddi\source\repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\Assignments.razor"
        
     private long idToDelete = 0;
     private long idToAdd = 0;
