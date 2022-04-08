@@ -2,8 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\BlazorApp",
-    "\\BlazorApp\\BlazorApp"
+    "\\BlazorApp\\BlazorApp",
+    "\\BlazorApp\\BlazorApp\\Data",
+    "\\BlazorApp\\BlazorApp\\Pages",
+    "\\BlazorApp\\BlazorApp\\Services",
+    "\\BlazorApp\\BlazorApp\\Services\\Implementation",
+    "\\BlazorApp\\BlazorApp\\Services\\Interface",
+    "\\BlazorApp\\BlazorApp\\Shared"
   ],
-  "SelectedNode": "\\BlazorApp\\BlazorApp\\BlazorApp.csproj",
+  "SelectedNode": "\\BlazorApp\\BlazorApp.sln",
   "PreviewInSolutionExplorer": false
 }
