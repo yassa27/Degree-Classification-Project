@@ -402,4 +402,7 @@ C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\Blaz
 C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\obj\Debug\net5.0\ref\BlazorApp.dll
 C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\obj\Debug\net5.0\BlazorApp.pdb
 C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\obj\Debug\net5.0\BlazorApp.genruntimeconfig.cache
-C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Assignment\EditAssignment.razor.g.cs
+C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\bin\Debug\net5.0\Microsoft.Azure.SignalR.Common.dll
+C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\bin\Debug\net5.0\Microsoft.Azure.SignalR.dll
+C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\bin\Debug\net5.0\Microsoft.Azure.SignalR.Protocols.dll
