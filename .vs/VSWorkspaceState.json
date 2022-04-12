@@ -3,12 +3,13 @@
     "",
     "\\BlazorApp",
     "\\BlazorApp\\BlazorApp",
-    "\\BlazorApp\\BlazorApp\\Data",
     "\\BlazorApp\\BlazorApp\\Pages",
+    "\\BlazorApp\\BlazorApp\\Pages\\Assignment",
     "\\BlazorApp\\BlazorApp\\Services",
-    "\\BlazorApp\\BlazorApp\\Services\\Implementation",
     "\\BlazorApp\\BlazorApp\\Services\\Interface",
-    "\\BlazorApp\\BlazorApp\\Shared"
+    "\\BlazorApp\\BlazorApp\\Shared",
+    "\\BlazorApp\\BlazorApp\\wwwroot",
+    "\\BlazorApp\\BlazorApp\\wwwroot\\css"
   ],
   "SelectedNode": "\\BlazorApp\\BlazorApp.sln",
   "PreviewInSolutionExplorer": false
