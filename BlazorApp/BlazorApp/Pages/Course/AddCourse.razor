@@ -6,14 +6,18 @@
 @using BlazorApp.Services.Interface
 @inject ICourseManagementService _course
 @inject NavigationManager NavigationManager
+
+@*User is redirected to this page when adding new course*@
 @if (Successmessage != null)
 {
     <p class="alert-success">@Successmessage</p>
     @*NavigationManager.NavigateTo("./addmodule");*@
-}else if(Failuremessage != null)
+}
+else if(Failuremessage != null)
 {
     <p class="alert-danger">@Failuremessage</p>
 }
+
 <h3>Add Course</h3>
 <form>
     <div class="form-outline mb-4">
@@ -38,6 +42,7 @@
 
     </div>
 </form>
+
 @code {
     CourseVM courseVM = new CourseVM();
     public string UserName;

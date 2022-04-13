@@ -119,12 +119,14 @@ using BlazorApp.Services.Interface;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 48 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Index.razor"
+#line 62 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Index.razor"
        
+    private long idToDelete = 0;
     public string UserName;
     string Successmessage = null;
     string Failuremessage = null;
     CourseVM courseVM = new CourseVM();
+
     protected override async Task OnInitializedAsync()
     {
         UserName = HttpContextAccessor.HttpContext.User.Identity.Name;
@@ -136,7 +138,21 @@ using BlazorApp.Services.Interface;
             float fc = (float)Math.Round(f * 100f) / 100f;
             courseVM.CourseProgress = fc;
         }
-       
+    }
+    private async Task DeleteCourse(long id)
+    {
+        var res = _Course.RemoveCourse(id);
+
+        if (res == true)
+        {
+            Successmessage = "Course Deleted  SuccessFully";
+            var response = _Course.GetUserCourse(UserName);
+            this.StateHasChanged();
+        }
+        else
+        {
+            Failuremessage = "Something Went Wrong... ";
+        }
     }
 
 #line default

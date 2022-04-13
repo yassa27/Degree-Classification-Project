@@ -26,6 +26,7 @@ namespace BlazorApp.Services.Implementation
                     var coursecheck =  _context.Courses.Where(x => x.InsertedBy == courseVM.InsertedBy).FirstOrDefault();
                     if (coursecheck == null)
                     {
+                        //new course data object is created, by reading user input
                         Course course = new Course();
                         course.CourseYear = courseVM.CourseYear;
                         course.CourseName = courseVM.CourseName;
@@ -78,7 +79,7 @@ namespace BlazorApp.Services.Implementation
                     }
                     else if (course.CourseProgress >= 39.5 && course.CourseProgress <= 49.4)
                     {
-                        course.DegreeClassification = "3rd";
+                        course.DegreeClassification = "Third";
                     }
                     else if (course.CourseProgress == 0)
                     {
@@ -98,7 +99,7 @@ namespace BlazorApp.Services.Implementation
                 throw;
             }
         }
-       
+       // Course removed by reading course ID
         public bool RemoveCourse(long courseid)
         {
             var turn = false;
@@ -179,6 +180,7 @@ namespace BlazorApp.Services.Implementation
             }
             return turn;
         }
+        //get all modules
         public ModuleListVM GetUserModules(string user)
         {
             ModuleListVM moduleListVM = new ModuleListVM();
@@ -204,6 +206,7 @@ namespace BlazorApp.Services.Implementation
                 throw;
             }
         }
+        //get specific module
         public ModuleVM GetModuleById(long id)
         {
             try
@@ -226,6 +229,7 @@ namespace BlazorApp.Services.Implementation
                 throw;
             }
         }
+        //remove specific module, by reading moduleID and userID
         public bool RemoveModule(long id, string user)
         {
             var turn = false;
@@ -273,6 +277,7 @@ namespace BlazorApp.Services.Implementation
             }
             return turn;
         }
+        //New assignment
         public bool AddNewAssignment(AssignmentVM assignmentVM)
         {
             bool turn = false;
@@ -324,6 +329,7 @@ namespace BlazorApp.Services.Implementation
             }
             return turn;
         }
+        //Get all assignments
         public AssignmentListVM GetAssignments(long moduleid)
         {
             AssignmentListVM assignmentListVM = new AssignmentListVM(); 
@@ -347,6 +353,7 @@ namespace BlazorApp.Services.Implementation
                 throw;
             }
         }
+        //Get specific Assignment
         public AssignmentVM GetAssignmentById(long id)
         {
             try
@@ -368,6 +375,7 @@ namespace BlazorApp.Services.Implementation
                 throw;
             }
         }
+        //Remove specific assignment by reading assignmentID, moduleID and userID
         public bool RemoveAssignment(long id,long moduleid, string user)
         {
             var turn = false;

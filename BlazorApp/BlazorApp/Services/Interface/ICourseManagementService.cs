@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 
 namespace BlazorApp.Services.Interface
 {
+    //This is the public interface, users will not be able to access function implementation
     public interface ICourseManagementService
     {
         bool AddNewCourse(CourseVM courseVM);

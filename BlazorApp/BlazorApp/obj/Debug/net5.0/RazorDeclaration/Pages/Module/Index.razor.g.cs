@@ -132,7 +132,7 @@ using BlazorApp.Services.Interface;
         var res =  _Module.GetUserModules(UserName);
         moduleListVM.moduleVMs = res.moduleVMs;
     }
-    private void AddMoudle()
+    private void AddModule()
     {
         NavigationManager.NavigateTo("/addmodule");
     }

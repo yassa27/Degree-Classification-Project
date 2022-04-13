@@ -2,6 +2,7 @@
 @namespace BlazorApp.Pages
 @using Microsoft.AspNetCore.Authorization
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@*Built-in Authorize attribute, will only display and function if user is logged in*@
 @attribute [Authorize]
 @{
     Layout = null;

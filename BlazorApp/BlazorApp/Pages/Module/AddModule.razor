@@ -6,13 +6,16 @@
 @using BlazorApp.Services.Interface
 @inject ICourseManagementService _Module
 @inject NavigationManager NavigationManager
+
 @if (Successmessage != null)
 {
     <p class="alert-success">@Successmessage</p>
-}else if(Failuremessage != null)
+}
+else if(Failuremessage != null)
 {
     <p class="alert-danger">@Failuremessage</p>
 }
+
 <h3>Add Module</h3>
 <form>
     <div class="form-outline mb-4">
@@ -59,7 +62,7 @@
             }
             else
             {
-                Failuremessage = "Module is Already Added or Something Went Wrong... ";
+                Failuremessage = "Module already exists or Something Went Wrong... ";
             }
         }
     }

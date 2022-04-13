@@ -7,15 +7,18 @@
 @inject ICourseManagementService _Module
 @inject NavigationManager NavigationManager
 
+@*Module View Page*@
 <h3>Modules</h3>
 @if (moduleListVM.moduleVMs == null)
 {
     <h3>Loading.....</h3>
-}else{
+}
+else
+{
     <div class="row">
         <div class="col-md-12">
             <div class="col-12 col-sm-0 text-right mb-2">
-                <button class="btn btn-primary mx-2" @onclick="(() => AddMoudle())">
+                <button class="btn btn-primary mx-2" @onclick="(() => AddModule())">
                                         Add New Module
                                     </button></div>
             <table class="table table-striped">
@@ -64,6 +67,7 @@
         </div>
     </div>
 }
+
 @code {
     private long idToDelete = 0;
     public string UserName;
@@ -76,7 +80,7 @@
         var res =  _Module.GetUserModules(UserName);
         moduleListVM.moduleVMs = res.moduleVMs;
     }
-    private void AddMoudle()
+    private void AddModule()
     {
         NavigationManager.NavigateTo("/addmodule");
     }
@@ -98,7 +102,7 @@
             moduleListVM.moduleVMs = response.moduleVMs;
         }else
         {
-            Failuremessage = "Something Wents Wrong... ";
+            Failuremessage = "Something Went Wrong... ";
         }
     }
 }

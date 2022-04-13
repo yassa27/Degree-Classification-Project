@@ -7,11 +7,11 @@
 @inject ICourseManagementService _Course
 
 
-
+@*Checks if course exists first, then displays relevant information*@
 @if (courseVM.CourseName == null)
 {
     <div class="col-md-12 mb-4" >
-        <h6>You Have Not Add Course Yet, Please Add Your Course</h6>
+        <h6>You Have Not Added a Course Yet, Please Add Your Course</h6>
     </div>
     <div class="col-md-12" >
         <a class="btn btn-labeled btn-dgreen" href="addcourse" role="button" style="padding-top: 5px; padding-bottom: 5px; margin-bottom: 20px; width: 280px; margin-left: 50px; margin-right50px;">
@@ -19,6 +19,7 @@
         </a>
     </div>
 }
+@*Course information*@
 else
 {
    
@@ -39,17 +40,32 @@ else
     <p class="card-text"><strong>Your Degree Classification : </strong> @courseVM.DegreeClassification </p>
   </div>
   <div class="card-footer text-muted">
-   <a href="/module/index"  class="btn btn-primary"><i>Go to your Course Modules</i></a>
+      <a href="/module/index" class="btn btn-primary"><i>Go to your Course Modules</i></a>
+      @if (idToDelete == courseVM.Id)
+      {
+
+          <button class="btn btn-danger mx-2" @onclick="(() => DeleteCourse(courseVM.Id))">
+              Confirm Delete
+          </button>
+      }
+      else
+      {
+          <button class="btn btn-outline-danger mx-2" @onclick="(() => idToDelete =courseVM.Id)">
+              Delete
+          </button>
+      }
   </div>
 </div>
 
 }
 
 @code {
+    private long idToDelete = 0;
     public string UserName;
     string Successmessage = null;
     string Failuremessage = null;
     CourseVM courseVM = new CourseVM();
+
     protected override async Task OnInitializedAsync()
     {
         UserName = HttpContextAccessor.HttpContext.User.Identity.Name;
@@ -61,7 +77,21 @@ else
             float fc = (float)Math.Round(f * 100f) / 100f;
             courseVM.CourseProgress = fc;
         }
-       
+    }
+    //function for deleting course, implementation found in services folder
+    private async Task DeleteCourse(long id)
+    {
+        var res = _Course.RemoveCourse(id);
+
+        if (res == true)
+        {
+            Successmessage = "Course Deleted  SuccessFully";
+            var response = _Course.GetUserCourse(UserName);
+        }
+        else
+        {
+            Failuremessage = "Something Went Wrong... ";
+        }
     }
 }
 
