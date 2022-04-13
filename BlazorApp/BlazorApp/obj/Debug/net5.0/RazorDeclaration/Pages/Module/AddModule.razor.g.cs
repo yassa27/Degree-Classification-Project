@@ -119,7 +119,7 @@ using BlazorApp.Services.Interface;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Module\AddModule.razor"
+#line 45 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Module\AddModule.razor"
        
     ModuleVM moduleVM = new ModuleVM();
     public string UserName;
@@ -140,7 +140,7 @@ using BlazorApp.Services.Interface;
             }
             else
             {
-                Failuremessage = "Module is Already Added or Something Went Wrong... ";
+                Failuremessage = "Module already exists or Something Went Wrong... ";
             }
         }
     }

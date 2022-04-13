@@ -119,7 +119,7 @@ using BlazorApp.Services.Interface;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 67 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Module\Index.razor"
+#line 71 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Module\Index.razor"
        
     private long idToDelete = 0;
     public string UserName;
@@ -154,7 +154,7 @@ using BlazorApp.Services.Interface;
             moduleListVM.moduleVMs = response.moduleVMs;
         }else
         {
-            Failuremessage = "Something Wents Wrong... ";
+            Failuremessage = "Something Went Wrong... ";
         }
     }
 

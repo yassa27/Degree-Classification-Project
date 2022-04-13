@@ -139,6 +139,7 @@ using BlazorApp.Services.Interface;
             courseVM.CourseProgress = fc;
         }
     }
+    //function for deleting course, implementation found in services folder
     private async Task DeleteCourse(long id)
     {
         var res = _Course.RemoveCourse(id);
@@ -147,7 +148,6 @@ using BlazorApp.Services.Interface;
         {
             Successmessage = "Course Deleted  SuccessFully";
             var response = _Course.GetUserCourse(UserName);
-            this.StateHasChanged();
         }
         else
         {

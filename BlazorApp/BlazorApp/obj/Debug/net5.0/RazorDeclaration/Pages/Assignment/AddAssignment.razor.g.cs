@@ -119,7 +119,7 @@ using BlazorApp.Services.Interface;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 44 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\AddAssignment.razor"
+#line 49 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Assignment\AddAssignment.razor"
        
     AssignmentVM assignmentVM = new AssignmentVM();
     public string UserName;

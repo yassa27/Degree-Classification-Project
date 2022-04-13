@@ -119,7 +119,7 @@ using BlazorApp.Services.Interface;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 41 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Course\AddCourse.razor"
+#line 46 "C:\Users\siddi\Source\Repos\yassa27\Degree-Classification-Project\BlazorApp\BlazorApp\Pages\Course\AddCourse.razor"
        
     CourseVM courseVM = new CourseVM();
     public string UserName;

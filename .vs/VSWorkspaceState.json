@@ -4,13 +4,13 @@
     "\\BlazorApp",
     "\\BlazorApp\\BlazorApp",
     "\\BlazorApp\\BlazorApp\\Pages",
-    "\\BlazorApp\\BlazorApp\\Pages\\Assignment",
+    "\\BlazorApp\\BlazorApp\\Pages\\Course",
+    "\\BlazorApp\\BlazorApp\\Pages\\Module",
     "\\BlazorApp\\BlazorApp\\Services",
-    "\\BlazorApp\\BlazorApp\\Services\\Interface",
-    "\\BlazorApp\\BlazorApp\\Shared",
+    "\\BlazorApp\\BlazorApp\\Services\\Implementation",
     "\\BlazorApp\\BlazorApp\\wwwroot",
     "\\BlazorApp\\BlazorApp\\wwwroot\\css"
   ],
-  "SelectedNode": "\\BlazorApp\\BlazorApp\\appsettings.json",
+  "SelectedNode": "\\BlazorApp\\BlazorApp.sln",
   "PreviewInSolutionExplorer": false
 }
